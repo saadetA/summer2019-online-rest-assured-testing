@@ -106,7 +106,7 @@ public class ORDSTestsDay4 {
                 get("/countries").prettyPeek().
                 thenReturn().jsonPath().getList("items");
 
-        assertEquals(25, countries.size());
+        assertEquals(25, countries.size());//old way assertion
     }
 
     /**
@@ -160,6 +160,7 @@ public class ORDSTestsDay4 {
                 when().
                 get("/countries").
                 then().assertThat().body("items.country_name" , contains("Argentina", "Brazil", "Canada", "Mexico", "United States of America"));
+
     }
 
     /**
@@ -169,6 +170,7 @@ public class ORDSTestsDay4 {
      * Then user verifies that every employee has positive salary
      *
      */
+
     @Test
     @DisplayName("Verify that every employee has positive salary")
     public void test6(){
@@ -273,6 +275,11 @@ public class ORDSTestsDay4 {
      *     "state_province": "Geneve",
      *     "country_id": "CH",
      */
+
+
+
+
+
     @Test
     @DisplayName("Verify that JSON body has following entries")
     public void test9(){

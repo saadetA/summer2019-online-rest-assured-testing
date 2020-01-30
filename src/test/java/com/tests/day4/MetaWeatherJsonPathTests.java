@@ -1,4 +1,4 @@
-package com.tests.day5;
+package com.tests.day4;
 
 import com.utilities.ConfigurationReader;
 import io.restassured.http.ContentType;
@@ -17,9 +17,8 @@ import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-public class MetaWeatherJsonPathTest {
 
-
+public class MetaWeatherJsonPathTests {
     @BeforeAll
     public static void setup() {
         baseURI = ConfigurationReader.getProperty("meta.weather.uri");
@@ -253,6 +252,7 @@ public class MetaWeatherJsonPathTest {
  * |World Weather Online|
  *
  *
-*
-*/
+ */
+
+
 
